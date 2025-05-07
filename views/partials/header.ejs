@@ -7,10 +7,11 @@
 </head>
 <body>
   <header id="header">
-    <a href="Home.html" class="logo">Logo</a>
+    <a href="/" id="logo">Logo</a>
     <nav class="nav">
-      <% const webpages = ['home', 'about', 'events', 'thankyou', 'contact']; %>
-      <% webpages.forEach(page => { %><a href="/<%= page %>" class="<%= page %>"><%=page %></a><% }) %>
+      <a href="/" id="home">home</a>
+      <% const webpages = ['about', 'events', 'thankyou', 'contact']; %>
+      <% webpages.forEach(page => { %><a href="/<%=page%>" id="<%=page%>"><%=page %></a><% }) %>
     </nav>
   </header>
 </body>
