@@ -17,13 +17,27 @@
     </div>
     <section id="Event-section">
         <% const EventsSections = ['Sports', 'Drama', 'Voluntering']; %>
-        
         <% EventsSections.forEach(item => { %>
-            <div class="Event">
-                <h1><%=item%></h1>
+            <h1><%=item%></h1>
+           <div class="event-wrapper">
+                <button class="nav-button" id='<%=item%>-left'>&lt;</button>
+                <div class="event-container" id="<%=item%>-display">
+                     <img src="" alt="Event Image" class="event-image" id="<%=item%>-image">
+                     <div class="event-info">
+                          <h2 class="event-title" id="<%=item%>-title"></h2>
+                          <p class="event-date" id="<%=item%>-date"></p>
+                          <p class="event-location" id="<%=item%>-location"></p>
+                          <p class="event-description" id="<%=item%>-description"></p>
+                     </div>
+                </div>
+                <button class="nav-button" id='<%=item%>-right'>&gt;</button>
             </div>
         <% }) %>
     </section>
 <p>Check out what's happening soon!</p>
+<script>
+  window.eventData = <%- JSON.stringify(events) %>;
+</script>
+<script src="/scripts/events.js"></script>
 </body>
 </html>
