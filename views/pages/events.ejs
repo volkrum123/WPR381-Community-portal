@@ -15,6 +15,15 @@
         </div>
         <div id="top-style"></div>
     </div>
+    <section id="Event-section">
+        <% const EventsSections = ['Sports', 'Drama', 'Voluntering']; %>
+        
+        <% EventsSections.forEach(item => { %>
+            <div class="Event">
+                <h1><%=item%></h1>
+            </div>
+        <% }) %>
+    </section>
 <p>Check out what's happening soon!</p>
 </body>
 </html>
