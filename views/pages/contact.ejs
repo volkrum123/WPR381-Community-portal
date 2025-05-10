@@ -5,10 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+<script>
+  function validateForm(){
+    let userName= document.forms['contactForm']['name'].value;
+    let userEmail= document.forms['contactForm']['email'].value;
+    let userMessage= userName=document.forms['contactForm']['message'].value;
+    
+    if(userName ==" " || !isNaN(userName)){
+      alert("Please fill in your Name.");
+      return false;
+    }
+      if(userEmail ==" " || userEmail!="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"){
+      alert("Incorrect format. Please fill in your email correctly.");
+      return false;
+    }
+     if(userMessage ==" " ){
+      alert("Please type in a message about the organization.");
+      return false;
+    }
+  }
+</script>
 <body>
   <%- include('../partials/header') %>
   <h1>Contact Us</h1>
-<form method="POST" action="/contact">
+<form name="contactForm" onsubmit="return validateForm()" method="POST" action="/contact">
   <input type="text" name="name" placeholder="Your Name" required /><br />
   <input type="email" name="email" placeholder="Your Email" required /><br />
   <textarea name="message" placeholder="Your Message" required></textarea><br />
