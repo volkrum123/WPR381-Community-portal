@@ -8,7 +8,7 @@ body{
 }
 #header{
     box-sizing: border-box;
-    position:fixed;
+    position:absolute;
     top:0;
     left:0;
     width:100%;
@@ -36,9 +36,9 @@ body{
 }
 #logo{
     position:absolute;
-    top:12px;
-    width: 60px;
-    height:60px;
+    top:1px;
+    width: 300px;
+    height:80px;
 }
 .nav a{
     color:white;
