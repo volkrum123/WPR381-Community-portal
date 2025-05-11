@@ -5,17 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+<link rel="stylesheet" href="/css/contact.css">
 <script>
   function validateForm(){
     let userName= document.forms['contactForm']['name'].value;
     let userEmail= document.forms['contactForm']['email'].value;
-    let userMessage= userName=document.forms['contactForm']['message'].value;
+    let userMessage=document.forms['contactForm']['message'].value;
     
     if(userName ==" " || !isNaN(userName)){
       alert("Please fill in your Name.");
       return false;
     }
-      if(userEmail ==" " || userEmail!="/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/"){
+      if(userEmail.trim() ===" " || "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/".test(userEmail)){
       alert("Incorrect format. Please fill in your email correctly.");
       return false;
     }
@@ -28,12 +29,26 @@
 <body>
   <%- include('../partials/header') %>
   <h1>Contact Us</h1>
+<div class="form-container">
 <form name="contactForm" onsubmit="return validateForm()" method="POST" action="/contact">
+  <div>
+  <label for="Name">Name:</label><br>
   <input type="text" name="name" placeholder="Your Name" required /><br />
+  </div>
+
+  <div>
+  <label for="Email">Email:</label><br>
   <input type="email" name="email" placeholder="Your Email" required /><br />
-  <textarea name="message" placeholder="Your Message" required></textarea><br />
+  </div>
+
+  <div>
+  <label for="Message">Message:</label><br>
+  <textarea name="message" placeholder="Enter a Message" required></textarea><br />
+  </div>
+
   <button type="submit">Send</button>
 </form>
+</div>
 </body>
 </html>
 
