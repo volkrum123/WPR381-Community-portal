@@ -1,4 +1,64 @@
-body{
-    background-image: url('/images/home.webp');
-    background-size: cover;
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+#Event-title{
+   width: 100%;
+  height: 350px;
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+#Event-title h1{
+  font-size: 56px;
+  margin: 0;
+  animation: slideFadeIn 1.2s ease-out forwards;
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+}
+#Event-title p{
+  font-size: 20px;
+  margin-top: 10px;
+  opacity: 0.85;
+  animation: fadeIn 2s ease-in forwards;
+}
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.85;
+  }
+}
+#top-style{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background: url('https://svgshare.com/i/uQz.svg') repeat-x;
+  background-size: cover;
+}
+@media (max-width: 600px) {
+  .Event-title h1 {
+    font-size: 35.2px;
+  }
+  .Event-title p {
+    font-size: 16px;
+  }
 }
