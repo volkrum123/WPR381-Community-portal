@@ -16,13 +16,13 @@
   overflow: hidden;
 }
 #Event-title h1{
-  font-size: 3.5rem;
+  font-size: 56px;
   margin: 0;
   animation: slideFadeIn 1.2s ease-out forwards;
   text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
 #Event-title p{
-  font-size: 1.25rem;
+  font-size: 20px;
   margin-top: 10px;
   opacity: 0.85;
   animation: fadeIn 2s ease-in forwards;
@@ -56,10 +56,10 @@
 }
 @media (max-width: 600px) {
   .Event-title h1 {
-    font-size: 2.2rem;
+    font-size: 35.2px;
   }
   .Event-title p {
-    font-size: 1rem;
+    font-size: 16px;
   }
 }
 #Event-section{
@@ -73,7 +73,7 @@
 }
 #Event-section h1{
   text-align: center;
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: 700;
   color: #0f3057; /* deep blue for contrast, matches style */
   margin: 40px 0 20px;
