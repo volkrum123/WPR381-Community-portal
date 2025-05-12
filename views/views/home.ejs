@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+
+<main class="container">
+  <section class="hero">
+    <h1>Welcome to the Community Portal</h1>
+    <p>Your hub for events, news, and connection.</p>
+  </section>
+
+  <section class="events">
+    <h2>Upcoming Events</h2>
+    <% if (events.length > 0) { %>
+      <div class="event-grid">
+        <% events.forEach(event => { %>
+          <div class="event-card">
+            <img src="/images/<%= event.image %>" alt="<%= event.title %>">
+            <h3><%= event.title %></h3>
+            <p><strong>Date:</strong> <%= event.date %></p>
+            <p><strong>Location:</strong> <%= event.location %></p>
+          </div>
+        <% }) %>
+      </div>
+    <% } else { %>
+      <p>No upcoming events at the moment. Stay tuned!</p>
+    <% } %>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
