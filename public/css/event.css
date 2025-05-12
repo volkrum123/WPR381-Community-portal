@@ -68,9 +68,25 @@
     margin: 0;
     padding:0;
     padding-top: 30px;
-    text-align: center;
     background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#Event-section h1{
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f3057; /* deep blue for contrast, matches style */
+  margin: 40px 0 20px;
+  position: relative;
+}
+#Event-section h1::after{
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #00d2ff, #3a7bd5);
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
 .event-wrapper {
   display: flex;
@@ -98,6 +114,7 @@
   color: white;
 }
 
+
 .event-container {
   display: flex;
   align-items: flex-start;
@@ -108,7 +125,8 @@
   width: 100%;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
-  height: 290px;
+  height: fit-content;
+  
   transition: transform 0.2s ease;
 }
 .event-container:hover {
