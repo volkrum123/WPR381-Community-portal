@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href='/css/header.css'>
-</head>
-<body>
-  <header id="header">
-    <a href="/"><img src="/images/Quateng.png" alt='Community logo' id="logo"></a>
-    <nav class="nav">
-      <a href="/" id="home">home</a>
-      <% const webpages = ['about', 'events', 'thankyou', 'contact']; %>
-      <% webpages.forEach(page => { %><a href="/<%=page%>" id="<%=page%>"><%=page %></a><% }) %>
-    </nav>
-  </header>
-</body>
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" hfref="/css/about.css" />
+  </head>
+  <body>
+    <header id="header">
+      <a href="/"
+        ><img src="/images/Quateng.png" alt="Community logo" id="logo"
+      /></a>
+      <nav class="nav">
+        <a href="/" id="home">home</a>
+        <% const webpages = ['about', 'events', 'thankyou', 'contact']; %> <%
+        webpages.forEach(page => { %><a href="/<%=page%>" id="<%=page%>"
+          ><%=page %></a
+        ><% }) %>
+      </nav>
+    </header>
+  </body>
 </html>

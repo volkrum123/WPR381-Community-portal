@@ -21,8 +21,48 @@ router.get('/', (req, res) => {
 });
 
 router.get('/about', (req, res) => {
-    res.render('pages/about');
+  const leader = {
+    name: "John",
+    role: "Community Leader",
+    job: "Business Owner",
+    bio: "John has seen what can happen when people work together, share ideas and knowledge. He is passionate about creating a space for exactly this to happen. Along with the dynamic team, who each bring their own grace to the table, his vision has come to life in this community platform.",
+    image: "/images/leader.jpg",
+  };
+
+  const team = [
+    {
+      name: "Margaret",
+      role: "Secretary, Events coordinator",
+      job: "Primary school teacher",
+      bio: "Margaret is passionate about the youth and creating a community where children are cared for and have opportunities to grow. She is very good at administration and ensures everything behind the scenes of the community platform runs smoothly.",
+      image: "/images/secretary.jpg",
+    },
+    {
+      name: "Giovanni",
+      role: "Host",
+      job: "Pizzeria owner",
+      bio: "Giovanni loves it when people get-together around a meal to share ideas and fellowship. He often avails his restaurant for community gatherings and game nights. Other times he brings the meal to where the people are.",
+      image: "/images/host.jpg",
+    },
+    {
+      name: "Rebecca",
+      role: "Social media",
+      job: "Marketing",
+      bio: "content moderation...",
+      image: "/images/social_media.jpg",
+    },
+    {
+      name: "John",
+      role: "Events coordinator",
+      job: "DJ, Radio host",
+      bio: "arranges events, ensures there is music and brings the vibe",
+      image: "/images/events.jpg",
+    },
+  ];
+
+  res.render('pages/about', { leader, team });
 });
+
 
 router.get('/events', (req, res) => {
     res.render('pages/events',{events});
