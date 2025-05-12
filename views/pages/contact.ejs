@@ -6,6 +6,7 @@
   <title>Document</title>
 </head>
 <link rel="stylesheet" href="/css/contact.css">
+<link rel="stylesheet" href="/css/home.css">
 <script>
   function validateForm(){
     let userName= document.forms['contactForm']['name'].value;
@@ -28,6 +29,13 @@
 </script>
 <body>
   <%- include('../partials/header') %>
+   <div id="Event-title">
+        <div>
+            <h1>Quanteng Community Activities!</h1>
+            <p>Our community events range from sports to festivals and even volunteering oppertunities.</p>
+        </div>
+        <div id="top-style"></div>
+    </div>
   <h1>Contact Us</h1>
 <div class="form-container">
 <form name="contactForm" onsubmit="return validateForm()" method="POST" action="/contact">
@@ -49,6 +57,7 @@
   <button type="submit">Send</button>
 </form>
 </div>
+<%- include('../partials/footer') %>
 </body>
 </html>
 
