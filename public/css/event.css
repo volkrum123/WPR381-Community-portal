@@ -68,6 +68,7 @@
     margin: 0;
     padding:0;
     padding-top: 30px;
+    padding-bottom: 30px;
     background: linear-gradient(to bottom right, #f0f4f8, #d9e2ec);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
