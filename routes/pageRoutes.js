@@ -17,7 +17,7 @@ const events = [
   {title: "Pave the Way: Road Repair Volunteer Blitz", date: "July 26, 2025", location: "Krugersdorp, Gauteng", description: "Be part of a grassroots effort to patch potholes and repair community roads. Led by local engineers and supported by volunteers, this hands-on day of action improves safety and mobility. Everyone is welcome to contribute time, tools, or materials.", image: "/images/Lessons.jpeg"}
 ];
 router.get('/', (req, res) => {
-    res.render('pages/home');
+    res.render('pages/home',{events});
 });
 
 router.get('/about', (req, res) => {
