@@ -5,23 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<link rel="stylesheet" href="/css/contact.css">
 <link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/contact.css">
 <script>
   function validateForm(){
     let userName= document.forms['contactForm']['name'].value;
     let userEmail= document.forms['contactForm']['email'].value;
     let userMessage=document.forms['contactForm']['message'].value;
     
-    if(userName ==" " || !isNaN(userName)){
+    if(userName.trim() ==="" || !/^[A-Za-z\s]+$/.test(userName)){
       alert("Please fill in your Name.");
       return false;
     }
-      if(userEmail.trim() ===" " || "/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/".test(userEmail)){
+      if(userEmail.trim() ==="" || !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(userEmail)){
       alert("Incorrect format. Please fill in your email correctly.");
       return false;
     }
-     if(userMessage ==" " ){
+     if(userMessage ==="" ){
       alert("Please type in a message about the organization.");
       return false;
     }
@@ -31,13 +31,14 @@
   <%- include('../partials/header') %>
    <div id="Event-title">
         <div>
-            <h1>Quanteng Community Activities!</h1>
-            <p>Our community events range from sports to festivals and even volunteering oppertunities.</p>
+            <h1>Gauteng Community Activities!</h1>
+            <p>Please fill in your contact details if you are interested in future events</p>
         </div>
         <div id="top-style"></div>
     </div>
-  <h1>Contact Us</h1>
+   <div class="wrapper">
 <div class="form-container">
+  <h1>Contact Us</h1><br>
 <form name="contactForm" onsubmit="return validateForm()" method="POST" action="/contact">
   <div>
   <label for="Name">Name:</label><br>
@@ -56,6 +57,7 @@
 
   <button type="submit">Send</button>
 </form>
+</div> 
 </div>
 <%- include('../partials/footer') %>
 </body>
