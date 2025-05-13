@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  animation: fadeIn 1.5s ease-out;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 20px 0 10px;
+  animation: slideIn 1s ease-out 0.5s forwards;
+  opacity: 0;
+}
+p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  animation: slideIn 1s ease-out 0.8s forwards;
+  opacity: 0;
+}
+
+/* Checkmark animation */
+.checkmark-wrapper {
+  animation: popIn 0.8s ease-out;
+}
+.checkmark {
+  background-color: #4a90e2;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+.checkmark span {
+  font-size: 50px;
+  color: white;
+  animation: bounce 1.2s ease;
+}
+
+/* Button styling */
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #fff;
+  color: #764ba2;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  animation: fadeIn 1.5s ease-out 1.2s forwards;
+  opacity: 0;
+}
+.back-button:hover {
+  background: #00d2ff;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
