@@ -51,6 +51,9 @@ p {
   color: white;
   animation: bounce 1.2s ease;
 }
+p span{
+  color:#ffc800;
+}
 
 /* Button styling */
 .back-button {
