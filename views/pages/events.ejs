@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="\css\event.css">
-</head>
-<body>
+    <link rel="stylesheet" href="\css\event.css" />
+  </head>
+  <body>
     <%- include('../partials/header') %>
     <div id="Event-title">
-        <div>
-            <h1>Quanteng Community Activities!</h1>
-            <p>Our community events range from sports to festivals and even volunteering oppertunities.</p>
-        </div>
-        <div id="top-style"></div>
+      <div>
+        <h1>Quanteng Community Activities!</h1>
+        <p>
+          Our community events range from sports to festivals and even
+          volunteering oppertunities.
+        </p>
+      </div>
+      <div id="top-style"></div>
     </div>
     <section id="Event-section">
-        <% const EventsSections = ['Sports', 'Festivals', 'Volunteering']; %>
-        <% EventsSections.forEach(item => { %>
-            <h1><%=item%></h1>
-           <div class="event-wrapper">
-                <button class="nav-button" id='<%=item%>-left'>&lt;</button>
-                <div class="event-container" id="<%=item%>-display">
-                     <img src="" alt="Event Image" class="event-image" id="<%=item%>-image">
-                     <div class="event-info">
-                          <h2 class="event-title" id="<%=item%>-title"></h2>
-                          <p class="event-date" id="<%=item%>-date"></p>
-                          <p class="event-location" id="<%=item%>-location"></p>
-                          <p class="event-description" id="<%=item%>-description"></p>
-                     </div>
-                </div>
-                <button class="nav-button" id='<%=item%>-right'>&gt;</button>
-            </div>
-        <% }) %>
+      <% const EventsSections = ['Sports', 'Festivals', 'Volunteering']; %> <%
+      EventsSections.forEach(item => { %>
+      <h1><%=item%></h1>
+      <div class="event-wrapper">
+        <button class="nav-button" id="<%=item%>-left">&lt;</button>
+        <div class="event-container" id="<%=item%>-display">
+          <img
+            src=""
+            alt="Event Image"
+            class="event-image"
+            id="<%=item%>-image"
+          />
+          <div class="event-info">
+            <h2 class="event-title" id="<%=item%>-title"></h2>
+            <p class="event-date" id="<%=item%>-date"></p>
+            <p class="event-location" id="<%=item%>-location"></p>
+            <p class="event-description" id="<%=item%>-description"></p>
+          </div>
+        </div>
+        <button class="nav-button" id="<%=item%>-right">&gt;</button>
+      </div>
+      <% }) %>
     </section>
-<%- include('../partials/footer') %>
-<script>
-  window.eventData = <%- JSON.stringify(events) %>;
-</script>
-<script src="/scripts/events.js"></script>
-</body>
+    <%- include('../partials/footer') %>
+    <script>
+      window.eventData = <%- JSON.stringify(events) %>;
+    </script>
+    <script src="/scripts/events.js"></script>
+  </body>
 </html>
