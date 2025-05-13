@@ -149,7 +149,7 @@ router.post("/contact", (req, res) => {
 });
 
 router.get("/thankyou", (req, res) => {
-  res.render("pages/thankyou");
+  res.render("pages/thankyou",{record});
 });
 
 module.exports = router;
