@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/PageTitle.css">
 </head>
 <body>
-    <%- include('../partials/header') %>
+    <%- include('../partials/header') %> <!--Inserts the navigation bar from the header.ejs-->
 <div id="Page-title">
         <div>
             <h1>Welcome to Guateng's Community portal!</h1>
@@ -16,21 +16,21 @@
         </div>
         <div id="top-style"></div>
 </div>
-<section id="Event-section">
-            <h1>Upcoming community event in Guateng...</h1>
-           <div class="event-wrapper">
-                <div class="event-container" id="Temporary-display">
-                     <img src="" alt="Event Image" class="event-image" id="Temporary-image">
-                     <div class="event-info">
-                          <h2 class="event-title" id="Temporary-title"></h2>
-                          <p class="event-date" id="Temporary-date"></p>
-                          <p class="event-location" id="Temporary-location"></p>
-                          <p class="event-description" id="Temporary-description"></p>
-                     </div>
-                </div>
+<section id="Event-section">  <!-- The section displays the upcomming event-->
+    <h1>Upcoming community event in Guateng...</h1>
+    <div class="event-wrapper">
+        <div class="event-container" id="Temporary-display">  <!--Contains all the information about the upcomming event-->
+        <img src="" alt="Event Image" class="event-image" id="Temporary-image"> 
+            <div class="event-info">
+                <h2 class="event-title" id="Temporary-title"></h2>
+                <p class="event-date" id="Temporary-date"></p>
+                <p class="event-location" id="Temporary-location"></p>
+                <p class="event-description" id="Temporary-description"></p>
             </div>
-    </section>
-    <%- include('../partials/footer') %>
+        </div>
+    </div>
+</section>
+    <%- include('../partials/footer') %> <!--Inserts the footer with all of the links from the footer.ejs-->
 
 <script src="/scripts/home.js"></script>
 </body>

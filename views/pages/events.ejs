@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="\css\PageTitle.css" />
   </head>
   <body>
-    <%- include('../partials/header') %>
+    <%- include('../partials/header') %> <!--Inserts the navigation bar from the header.ejs-->
     <div id="Page-title">
       <div>
         <h1>Quanteng's Community Activities!</h1>
@@ -19,31 +19,26 @@
       </div>
       <div id="top-style"></div>
     </div>
-    <section id="Event-section">
-      <% const EventsSections = ['Sports', 'Festivals', 'Volunteering']; %> <%
-      EventsSections.forEach(item => { %>
-      <h1><%=item%></h1>
-      <div class="event-wrapper">
-        <button class="nav-button" id="<%=item%>-left">&lt;</button>
-        <div class="event-container" id="<%=item%>-display">
-          <img
-            src=""
-            alt="Event Image"
-            class="event-image"
-            id="<%=item%>-image"
-          />
-          <div class="event-info">
-            <h2 class="event-title" id="<%=item%>-title"></h2>
-            <p class="event-date" id="<%=item%>-date"></p>
-            <p class="event-location" id="<%=item%>-location"></p>
-            <p class="event-description" id="<%=item%>-description"></p>
-          </div>
-        </div>
-        <button class="nav-button" id="<%=item%>-right">&gt;</button>
-      </div>
-      <% }) %>
+    <section id="Event-section"> <!-- The section displays all of the community events event-->
+      <% const EventsSections = ['Sports', 'Festivals', 'Volunteering']; %> 
+        <% EventsSections.forEach(item => { %>                                           <!-- This js code loops through the different catagories-->
+           <h1><%=item%></h1>                                                            <!--Foreach category is creates a container for the event-->
+           <div class="event-wrapper">                                                   <!-- In Each container is specisfies the information about the event-->
+              <button class="nav-button" id="<%=item%>-left">&lt;</button>               <!--The loop creates 2 buttons foreach container which is used to scroll throught the events-->
+              <div class="event-container" id="<%=item%>-display">
+                <img src="" alt="Event Image" class="event-image" id="<%=item%>-image"/>
+                  <div class="event-info">
+                    <h2 class="event-title" id="<%=item%>-title"></h2>
+                    <p class="event-date" id="<%=item%>-date"></p>
+                    <p class="event-location" id="<%=item%>-location"></p>
+                    <p class="event-description" id="<%=item%>-description"></p>
+                  </div>
+              </div>
+              <button class="nav-button" id="<%=item%>-right">&gt;</button>
+            </div>
+        <% }) %>
     </section>
     <%- include('../partials/footer') %>
-    <script src="/scripts/events.js"></script>
+    <script src="/scripts/events.js"></script> <!--Links the ejs file to the event.js file that provides the buttons with functionality and the containers with the event info from an array-->
   </body>
 </html>

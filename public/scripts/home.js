@@ -1,8 +1,11 @@
-document.addEventListener('DOMContentLoaded', function () {
+
+//The Eventlister waits until the browser full loads the application befor executing.
+document.addEventListener('DOMContentLoaded', function () { 
     
-    fetch('/api/events')
-    .then(response => response.json())
+    fetch('/api/events') // Gets the events array from the /api/events route path in the pageRouter.js
+    .then(response => response.json()) //converts the array to json
     .then(events => {
+      
       function isFutureDate(dateStr) {
         const eventDate = new Date(dateStr);
         const today = new Date();
