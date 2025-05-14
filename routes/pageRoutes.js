@@ -83,6 +83,7 @@ router.get("/", (req, res) => {
   res.render("pages/home", { events });
 });
 
+//Array from which JS dynamically adds information to html page for team leader and members.
 router.get("/about", (req, res) => {
   const leader = {
     name: "John",
@@ -109,16 +110,16 @@ router.get("/about", (req, res) => {
     },
     {
       name: "Rebecca",
-      role: "Social media",
+      role: "Social media, Portal content",
       job: "Marketing",
-      bio: "content moderation...",
+      bio: "Rebecca avails her marketing skills to manage the community portal's social media accounts and is responsible for content moderation. She helps to keep things positive and inspirational.",
       image: "/images/social_media.jpg",
     },
     {
-      name: "John",
+      name: "Sandra",
       role: "Events coordinator",
       job: "DJ, Radio host",
-      bio: "arranges events, ensures there is music and brings the vibe",
+      bio: "Sandra is a radio host at one of Gauteng's popular radio stations. She loves arranging events and being a DJ and MC. She ensures there is music and brings the vibe, after making sure everything is running smoothly.",
       image: "/images/events.jpg",
     },
   ];
@@ -149,7 +150,7 @@ router.post("/contact", (req, res) => {
 });
 
 router.get("/thankyou", (req, res) => {
-  res.render("pages/thankyou",{record});
+  res.render("pages/thankyou", { record });
 });
 
 module.exports = router;

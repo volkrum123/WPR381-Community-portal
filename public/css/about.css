@@ -1,32 +1,80 @@
 * {
-  font-family: sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
-#wrapper {
-  margin: auto 0;
+body {
+  margin: 0 auto;
+  max-width: 100%;
   display: grid;
   grid-template-rows: repeat(5, auto);
   gap: 1rem;
-  padding: 1rem;
-  background-color: aliceblue;
+  padding: 0rem;
+  background-color: #f0ffff;
 }
 
-.about-community {
+header.light,
+header.light a {
+  color: #2c3e50;
+}
+
+header.light:hover,
+header.light a:hover {
+  color: #11998e;
+}
+
+.about-community,
+.team {
   padding-top: 80px;
+  background-color: #f0ffff;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.about-community h1 {
+  animation: slideInFromLeft 1s ease-out;
+}
+
+.team h1 {
+  animation: slideInFromRight 1s ease-out;
 }
 
 .about-community h1,
 .team h1 {
   text-align: center;
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  color: white;
 }
 
 .about-community .content {
   display: flex;
   flex-direction: row;
   text-align: left;
-  background-color: lightblue;
+  background-color: #fcfcfc;
   align-items: center;
   gap: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 
 .about-community .content p {
@@ -37,18 +85,31 @@
   width: 300px;
   height: auto;
   display: block;
+  border-radius: 10px;
+}
+
+.about-community .content:hover,
+.leader:hover,
+.member:hover {
+  background: linear-gradient(135deg, #11998e, #38ef7d);
+  color: white;
+  transform: scale(1.02);
+  transition: background 0.5s ease, transform 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
 .leader {
   display: flex;
   align-items: center;
   gap: 1rem;
-  background-color: rgb(59, 133, 158);
+  background-color: #fcfcfc;
   padding: 0.5rem;
   margin: 0 auto;
   max-width: 70%;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  overflow: hidden;
 }
 
 .leader h4 {
@@ -57,9 +118,11 @@
 
 .leader img {
   display: block;
-  width: 300px;
+  width: 250px;
   height: auto;
   padding: 0.5rem;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .leader div {
@@ -73,7 +136,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
-  background-color: lightblue;
+  background-color: transparent;
   padding: 0.5rem;
 }
 
@@ -82,9 +145,13 @@
 }
 
 .member {
-  background-color: white;
+  background-color: #fcfcfc;
   padding: 0.5rem;
   text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .member img {
@@ -93,4 +160,13 @@
   width: 250px;
   height: auto;
   padding: 0.5rem;
+  border-radius: 10px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .team-members {
+    grid-template-columns: 1fr;
+  }
 }
