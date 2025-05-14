@@ -3,7 +3,7 @@
 const express = require("express");
 const router = express.Router();
 
-const record = []; //In-memory array to store user data temporarily
+const formData = []; //In-memory array to store user data temporarily
 
 const events = [
   {
@@ -139,7 +139,7 @@ router.post("/contact", (req, res) => {
   const { name, email, message } = req.body;
 
   //We store user information in the in-memory array
-  record.push({
+  formData.push({
     name,
     email,
     message,

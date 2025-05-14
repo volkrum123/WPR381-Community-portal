@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
-app.use(express.urlencoded({ extended: true })); //required for req body to work
+app.use(express.urlencoded({ extended: true })); //required for req body data to be parsed to the server
 
 app.use("/", pageRoutes);
 
