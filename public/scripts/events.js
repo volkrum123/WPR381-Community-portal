@@ -1,7 +1,9 @@
 
 document.addEventListener('DOMContentLoaded', function () {
-  const events = window.eventData; // shared event array
 
+  fetch('/api/events')
+    .then(response => response.json())
+    .then(events => {
   function setupCarousel(sectionId, startIndex, endIndex) {
     let currentIndex = startIndex;
 
@@ -40,4 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
   setupCarousel('Sports', 0, 2);
   setupCarousel('Festivals', 3, 5);
   setupCarousel('Volunteering', 6, 8); // (consider fixing typo: should be 'Volunteering')
+  })
+  .catch(error => {
+      console.error('Failed to fetch events:', error);
+    });
 });

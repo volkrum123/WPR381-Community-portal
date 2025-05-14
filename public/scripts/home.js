@@ -1,13 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const events = window.eventData;
-
-    function isFutureDate(dateStr) {
-      const eventDate = new Date(dateStr);
-      const today = new Date();
-      today.setHours(0, 0, 0, 0); // Strip time for fair comparison
-      return eventDate >= today;
-    }
-
+    
+    fetch('/api/events')
+    .then(response => response.json())
+    .then(events => {
+      function isFutureDate(dateStr) {
+        const eventDate = new Date(dateStr);
+        const today = new Date();
+        today.setHours(0, 0, 0, 0); // Strip time for fair comparison
+        return eventDate >= today;
+      }
     function displayNextEvent() {
       const futureEvents = events
         .filter(e => isFutureDate(e.date))
@@ -32,4 +33,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     displayNextEvent();
+  })
+    .catch(err => {
+      console.error('Error fetching events:', err);
+    });
   });
