@@ -51,7 +51,10 @@ We activated the development server using "npm run dev". This restarts the brows
 2. Event page:
 ![alt text](image-2.png)
 
-3. Thankyou page:
+3. Contact page:
+![alt text](contact.png)
+
+4. Thankyou page:
 ![alt text](image-3.png)
 
 ## Reflection:
