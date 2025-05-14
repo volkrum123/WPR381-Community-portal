@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="/css/about.css" />
   </head>
   <body>
-    <%- include('../partials/header') %>
+    <!-- Inserts the navigation bar from the header -->
+    <%- include('../partials/header') %> 
+
 
     <section class="about-community">
       <h1>About Our Community</h1>
@@ -26,6 +28,7 @@
       <h1>Meet the Team</h1>
 
       <div class="leader">
+        <!-- Dynamically inserts leader & team-member details from about.js file -->
         <img src="<%= leader.image %>" alt="<%= leader.name %>" />
         <div>
           <h3><%= leader.name %></h3>
@@ -47,6 +50,7 @@
         <% }) %>
       </div>
     </section>
+    <!-- Inserts the footer -->
     <%- include('../partials/footer') %>
   </body>
 </html>
