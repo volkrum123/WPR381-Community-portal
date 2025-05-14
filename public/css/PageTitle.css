@@ -4,7 +4,7 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', sans-serif;
 }
-#Event-title{
+#Page-title{
    width: 100%;
   height: 350px;
   background: linear-gradient(135deg, #11998e, #38ef7d);
@@ -15,13 +15,13 @@
   text-align: center;
   overflow: hidden;
 }
-#Event-title h1{
+#Page-title h1{
   font-size: 56px;
   margin: 0;
   animation: slideFadeIn 1.2s ease-out forwards;
   text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
-#Event-title p{
+#Page-title p{
   font-size: 20px;
   margin-top: 10px;
   opacity: 0.85;
@@ -55,10 +55,10 @@
   background-size: cover;
 }
 @media (max-width: 600px) {
-  .Event-title h1 {
+  #Page-title h1 {
     font-size: 35.2px;
   }
-  .Event-title p {
+  #Page-title p {
     font-size: 16px;
   }
 }
