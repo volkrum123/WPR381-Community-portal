@@ -17,8 +17,7 @@ header.light a {
   color: #2c3e50;
 }
 
-header.light:hover,
-header.light a:hover {
+header.light:hover, header.light a:hover {
   color: #11998e;
 }
 
