@@ -17,12 +17,21 @@ Our team lead (Stiaan Megit) created a repository called (community portal) on h
 
 We were given the following file structure for our project:
 ![alt text](image.png)
-We committed this file structure to our github repository via VScode.
 
+We added a JS folder to the public folder, then we committed this file structure to our github repository via VScode.
 
-1. Run `npm install` to install dependencies.
-2. Use `npm run dev` to start the development server with nodemon.
-3. Add your own route handlers and middleware as needed.
+3. **Installing dependencies:**
+
+In order to build a Node.js + Express.js Server-Side website we needed to locally install the following packages in the project folder to gain access to certain functionality:
+
+- **Node.js(v18+)**
+- **Express.js(v4+)**
+- **Nodemon**
+- **NPM**
+
+4. **Running the development Server:**
+
+We activated the development server using "npm run dev". This restarts the browser and updates the webpage when we changed the a backend javascript code.
 
 ## Technologies Used
 1. **Node.js(v18+)**: The Node js runtime environment was implemented to handle the server-side for this particular website.
