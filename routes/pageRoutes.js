@@ -3,15 +3,17 @@
 const express = require("express");
 const router = express.Router();
 
+//Array for navigation bar
 const quickLinks = [
-  { name: 'Home', url: '/' },
-  { name: 'About', url: '/about' },
-  { name: 'Events', url: '/events' },
-  { name: 'Contact', url: '/contact' }
+  { name: "Home", url: "/" },
+  { name: "About", url: "/about" },
+  { name: "Events", url: "/events" },
+  { name: "Contact", url: "/contact" },
 ];
 
 const formData = []; //In-memory array to store user data temporarily
 
+//Array for events information
 const events = [
   {
     title: "Gauteng Rugby Day: Unity in Action",
@@ -139,7 +141,7 @@ router.get("/events", (req, res) => {
 });
 
 router.get("/contact", (req, res) => {
-  res.render("pages/contact", {quickLinks});
+  res.render("pages/contact", { quickLinks });
 });
 
 //POST route for form submission from client browser
@@ -157,12 +159,10 @@ router.post("/contact", (req, res) => {
 });
 
 router.get("/thankyou", (req, res) => {
-  res.render("pages/thankyou",{formData});
+  res.render("pages/thankyou", { formData });
 });
 
-router.get("/api/events", (req,res)=>{
-  res.json(events)
-})
+router.get("/api/events", (req, res) => {
+  res.json(events);
+});
 module.exports = router;
-
-
