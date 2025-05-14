@@ -3,6 +3,13 @@
 const express = require("express");
 const router = express.Router();
 
+const quickLinks = [
+  { name: 'Home', url: '/' },
+  { name: 'About', url: '/about' },
+  { name: 'Events', url: '/events' },
+  { name: 'Contact', url: '/contact' }
+];
+
 const formData = []; //In-memory array to store user data temporarily
 
 const events = [
@@ -80,7 +87,7 @@ const events = [
   },
 ];
 router.get("/", (req, res) => {
-  res.render("pages/home", { events });
+  res.render("pages/home", { events, quickLinks });
 });
 
 router.get("/about", (req, res) => {
@@ -123,15 +130,15 @@ router.get("/about", (req, res) => {
     },
   ];
 
-  res.render("pages/about", { leader, team });
+  res.render("pages/about", { leader, team, quickLinks });
 });
 
 router.get("/events", (req, res) => {
-  res.render("pages/events", { events });
+  res.render("pages/events", { events, quickLinks });
 });
 
 router.get("/contact", (req, res) => {
-  res.render("pages/contact");
+  res.render("pages/contact", {quickLinks});
 });
 
 //POST route for form submission from client browser
@@ -151,5 +158,6 @@ router.post("/contact", (req, res) => {
 router.get("/thankyou", (req, res) => {
   res.render("pages/thankyou",{record});
 });
+
 
 module.exports = router;

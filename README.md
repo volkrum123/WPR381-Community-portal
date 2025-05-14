@@ -41,5 +41,5 @@ We activated the development server using "npm run dev". This restarts the brows
 5.**Git and Github**: These version control systems were used for version control and fostered collaboration among the group. 
 6.**Nodemon**: A technology that is used for running the server live during development
 
-
+## Screenshots:
 

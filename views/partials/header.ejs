@@ -12,11 +12,10 @@
         ><img src="/images/Quateng.png" alt="Community logo" id="logo"
       /></a>
       <nav class="nav">
-        <a href="/" id="home">home</a>
-        <% const webpages = ['about', 'events','contact']; %> <%
-        webpages.forEach(page => { %><a href="/<%=page%>" id="<%=page%>"
-          ><%=page %></a
-        ><% }) %>
+        <% quickLinks.forEach(link => { %>
+           <a href="<%= link.url %>" id="<%=link.name%>"><%= link.name %></a>
+        <% }); %>
+        
       </nav>
     </header>
   </body>

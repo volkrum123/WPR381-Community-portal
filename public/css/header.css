@@ -50,7 +50,7 @@ body{
 .nav a:hover{
     color:rgba(250,250,250,0.5);
 }
-#contact {
+#Contact {
     display: inline-block;         /* Allows padding and border to work properly */
     padding: 10px 20px;            /* Adds spacing inside the link */
     background-color: #0aebf7;     /* A nice green background */
@@ -61,6 +61,6 @@ body{
     transition: background-color 0.3s ease; /* Smooth hover effect */
   }
   
-  #contact:hover {
+  #Contact:hover {
     background-color: #09d8db;     /* Slightly darker on hover */
   }
