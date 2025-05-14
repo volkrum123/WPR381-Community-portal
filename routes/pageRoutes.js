@@ -157,7 +157,12 @@ router.post("/contact", (req, res) => {
 });
 
 router.get("/thankyou", (req, res) => {
-  res.render("pages/thankyou",{record});
+  res.render("pages/thankyou",{formData});
 });
 
+router.get("/api/events", (req,res)=>{
+  res.json(events)
+})
 module.exports = router;
+
+
