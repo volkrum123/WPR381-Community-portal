@@ -156,7 +156,7 @@ router.post("/contact", (req, res) => {
 });
 
 router.get("/thankyou", (req, res) => {
-  res.render("pages/thankyou",{record});
+  res.render("pages/thankyou",{formData});
 });
 
 
