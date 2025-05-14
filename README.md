@@ -54,6 +54,9 @@ We activated the development server using "npm run dev". This restarts the brows
 3. Thankyou page:
 ![alt text](image-3.png)
 
+4. About page:
+![alt text](About_Screenshot.png)
+
 ## Reflection:
 
 1. **Home page:**We could've added more content to the body of the home page besides the upcomming-event placeholder.
