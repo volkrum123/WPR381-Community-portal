@@ -5,34 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/event.css">
+    <link rel="stylesheet" href="/css/PageTitle.css">
 </head>
 <body>
-    <%- include('../partials/header') %>
-<div id="Event-title">
+    <%- include('../partials/header') %> <!--Inserts the navigation bar from the header.ejs-->
+<div id="Page-title">
         <div>
-            <h1>Welcome to Quateng's Community portal!</h1>
-            <p> acentral hub for staying informed, engaged, and connected. Explore upcoming events, community news, and opportunities to get involved with neighbors and local initiatives.</p>
+            <h1>Welcome to Guateng's Community portal!</h1>
+            <p> A central hub for staying informed, engaged, and connected. Explore upcoming events, community news, and opportunities to get involved with neighbors and local initiatives.</p>
         </div>
         <div id="top-style"></div>
 </div>
-<section id="Event-section">
-            <h1>Upcoming community event...</h1>
-           <div class="event-wrapper">
-                <div class="event-container" id="Temporary-display">
-                     <img src="" alt="Event Image" class="event-image" id="Temporary-image">
-                     <div class="event-info">
-                          <h2 class="event-title" id="Temporary-title"></h2>
-                          <p class="event-date" id="Temporary-date"></p>
-                          <p class="event-location" id="Temporary-location"></p>
-                          <p class="event-description" id="Temporary-description"></p>
-                     </div>
-                </div>
+<section id="Event-section">  <!-- The section displays the upcomming event-->
+    <h1>Upcoming community event in Guateng...</h1>
+    <div class="event-wrapper">
+        <div class="event-container" id="Temporary-display">  <!--Contains all the information about the upcomming event-->
+        <img src="" alt="Event Image" class="event-image" id="Temporary-image"> 
+            <div class="event-info">
+                <h2 class="event-title" id="Temporary-title"></h2>
+                <p class="event-date" id="Temporary-date"></p>
+                <p class="event-location" id="Temporary-location"></p>
+                <p class="event-description" id="Temporary-description"></p>
             </div>
-    </section>
-    <%- include('../partials/footer') %>
-<script>
-  window.eventData = <%- JSON.stringify(events) %>;
-</script>
+        </div>
+    </div>
+</section>
+    <%- include('../partials/footer') %> <!--Inserts the footer with all of the links from the footer.ejs-->
+
 <script src="/scripts/home.js"></script>
 </body>
 </html>
